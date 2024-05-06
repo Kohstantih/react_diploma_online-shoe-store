@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { useAppDispatch } from "../../hooks/redux";
 import { updateItems } from "../../redux/reducers/setCartSlice";
+import { activationProductDetails } from "../../redux/reducers/setActiveProductSlice";
 
 import { TCartItemObject, TCartItemProps } from "../../types/TCartItemProps";
 
@@ -12,7 +13,7 @@ export default function CartItem({ object, index }: TCartItemProps) {
         const cartJson = (sessionStorage.getItem('cart'));
         if (cartJson) {
             const cart: TCartItemObject[] = JSON.parse(cartJson);
-            const cartFiltered = cart.filter((item) => item.id !== object.id && item.size !== object.size);
+            const cartFiltered = cart.filter((item) => item.id !== object.id || item.size !== object.size)
             dispatch(updateItems(cartFiltered));
             sessionStorage.setItem('cart', JSON.stringify(cartFiltered));
         }
@@ -21,7 +22,12 @@ export default function CartItem({ object, index }: TCartItemProps) {
     return (
         <tr>
             <td scope="row">{index += 1}</td>
-            <td><Link to={`/catalog/${object.id}`}>{object.name}</Link></td>
+            <td><Link
+                to={`/catalog/${object.id}`}
+                onClick={() => {
+                    dispatch(activationProductDetails());
+                }}
+            >{object.name}</Link></td>
             <td>{object.size}</td>
             <td>{object.count}</td>
             <td>{object.price} руб.</td>

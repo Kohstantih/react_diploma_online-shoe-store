@@ -44,10 +44,19 @@ export default function ProductDetails() {
         }
 
         const cartJson = sessionStorage.getItem('cart');
-        const cart: TCartItemObject[] | null = cartJson ? JSON.parse(cartJson) : null;
+        let cart: TCartItemObject[] | null = cartJson ? JSON.parse(cartJson) : null;
 
         if (cart) {
-            // const oldItem = cart.find((o) => o.id === cartItem.id && o.size === cartItem.size);
+            const oldItem = cart.find((o) => o.id === cartItem.id && o.size === cartItem.size)
+
+            if (oldItem) {
+                cart.map((o) => {
+                    if (o.id === cartItem.id && o.size === cartItem.size) o.count += cartItem.count
+                    return o;
+                })
+            } else {
+                cart = [...cart, cartItem]
+            }
             
             sessionStorage.setItem('cart', JSON.stringify(cart));
             dispatch(updateItems(cart));
