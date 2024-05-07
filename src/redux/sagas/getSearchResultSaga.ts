@@ -1,4 +1,4 @@
-import { delay, put, retry, takeLatest } from 'redux-saga/effects';
+import { cancel, delay, put, retry, takeLatest } from 'redux-saga/effects';
 
 import { GET_SEARCH_RESULT } from '../actions/actionTypes';
 import fetchSearch from '../../API/fetchSearch';
@@ -13,8 +13,10 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { TSearchArgs } from '../../types/TSearchArgs';
 
 function* handleGetSearchResult(action: PayloadAction<TSearchArgs>) {
-  yield delay(1000);
   yield put(startLoadingCatalogItems());
+  yield delay(1000);
+
+  if (!action.payload.search) yield cancel();
 
   try {
     const retryDelay = 2 * 1000;

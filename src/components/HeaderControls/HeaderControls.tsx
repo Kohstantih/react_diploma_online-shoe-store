@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useAppDispatch } from '../../hooks/redux';
 import { setSearchValue } from '../../redux/reducers/ctrlSearchFormSlice';
+
 import SearchFormHeaderWidget from '../SearchFormHeaderWidget/SearchFormHeaderWidget';
 import ShoppingCartWidget from '../ShopingCartWidget/ShoppingCartWidget';
 

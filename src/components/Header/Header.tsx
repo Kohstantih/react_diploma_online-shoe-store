@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useMemo } from 'react';
 
-import logo from '../../assets/header-logo.png';
-
 import HeaderControls from '../HeaderControls/HeaderControls';
 import NavigationList from '../NavigationList/NavigationList';
 
+import logo from '../../assets/header-logo.png';
 import './Header.css';
 
 export default function Header() {
-  const menuList = useMemo(() => {
-    return [
+  const menuList = useMemo(() => [
       {
         link: '/',
         name: 'Главная',
@@ -27,8 +25,7 @@ export default function Header() {
         link: '/contacts',
         name: 'Контакты',
       },
-    ];
-  }, []);
+    ], []);
 
   return (
     <header className="container">
