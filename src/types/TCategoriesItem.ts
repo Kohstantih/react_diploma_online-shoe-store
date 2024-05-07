@@ -1,4 +1,4 @@
 export type TCategoriesItem = {
-    id: number | null,
-    title: string
-}
+  id: number | null;
+  title: string;
+};

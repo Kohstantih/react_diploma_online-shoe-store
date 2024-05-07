@@ -1,7 +1,7 @@
-import { TCardObject } from "./TCardObject";
+import { TCardObject } from './TCardObject';
 
 export type TTopSalesState = {
-    topSales: TCardObject[],
-    isLoading: boolean,
-    error: null | string,
-}
+  topSales: TCardObject[];
+  isLoading: boolean;
+  error: null | string;
+};

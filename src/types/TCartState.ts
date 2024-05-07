@@ -1,6 +1,6 @@
-import { TCartItemObject } from "./TCartItemProps";
+import { TCartItemObject } from './TCartItemProps';
 
 export type TCartState = {
-    items: TCartItemObject[],
-    count: number,
-}
+  items: TCartItemObject[];
+  count: number;
+};

@@ -1,3 +1,3 @@
 export type TCtrlSearchFormState = {
-    value: '',
-}
+  value: '';
+};

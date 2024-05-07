@@ -1,8 +1,8 @@
-import { TCategoriesItem } from "./TCategoriesItem";
+import { TCategoriesItem } from './TCategoriesItem';
 
 export type TCategoriesState = {
-    categories: TCategoriesItem[],
-    activeCategoryId: number | null,
-    isLoading: boolean,
-    error: null | string,
-}
+  categories: TCategoriesItem[];
+  activeCategoryId: number | null;
+  isLoading: boolean;
+  error: null | string;
+};

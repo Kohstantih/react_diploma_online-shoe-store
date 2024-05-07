@@ -1,4 +1,4 @@
 export type TOwnerObject = {
-    phone: string,
-    address: string,
-  }
+  phone: string;
+  address: string;
+};

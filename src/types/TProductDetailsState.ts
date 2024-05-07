@@ -1,8 +1,8 @@
-import { TProductDetailsObject } from "./TProductDetailsObject";
+import { TProductDetailsObject } from './TProductDetailsObject';
 
 export type TProductDetailsState = {
-    isActive: boolean,
-    product: null | TProductDetailsObject,
-    isLoading: boolean,
-    error: null | string,
-}
+  isActive: boolean;
+  product: null | TProductDetailsObject;
+  isLoading: boolean;
+  error: null | string;
+};

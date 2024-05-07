@@ -1,8 +1,8 @@
 export type TNavigationListItem = {
-    link: string,
-    name: string,
-}
+  link: string;
+  name: string;
+};
 
 export type TNavigationListProps = {
-    list: TNavigationListItem[]
-}
+  list: TNavigationListItem[];
+};

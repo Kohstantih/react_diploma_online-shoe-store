@@ -1,5 +1,5 @@
 export type TOrderSendState = {
-    isSuccessFul: boolean,
-    isLoading: boolean,
-    error: null | string,
-}
+  isSuccessFul: boolean;
+  isLoading: boolean;
+  error: null | string;
+};

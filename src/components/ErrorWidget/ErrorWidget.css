@@ -1,10 +1,10 @@
 .error_container {
-    min-width: 300px;
-    width: min-content;
+  min-width: 300px;
+  width: min-content;
 
-    color: rgb(254, 97, 97);
-    border: 1px solid rgb(254, 97, 97);
+  color: rgb(254, 97, 97);
+  border: 1px solid rgb(254, 97, 97);
 
-    padding: 20px;
-    margin: 0 auto;
+  padding: 20px;
+  margin: 0 auto;
 }

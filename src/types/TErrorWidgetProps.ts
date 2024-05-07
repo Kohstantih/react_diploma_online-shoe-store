@@ -1,4 +1,4 @@
 export type TErrorWidgetProps = {
-    text: string,
-    request: () => void,
-}
+  text: string;
+  request: () => void;
+};

@@ -1,5 +1,5 @@
 export type TSearchArgs = {
-    search: string,
-    id?: number,
-    offset?: number
-}
+  search: string;
+  id?: number;
+  offset?: number;
+};

@@ -1,4 +1,4 @@
 export type TSearchFormHeaderWidgetProps = {
-    value: string,
-    setValue: (state: string) => void
-}
+  value: string;
+  setValue: (state: string) => void;
+};

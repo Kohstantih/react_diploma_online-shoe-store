@@ -1,4 +1,4 @@
 export type TButtonChangeCountProps = {
-    title: string,
-    setCount: () => void,
-}
+  title: string;
+  setCount: () => void;
+};
