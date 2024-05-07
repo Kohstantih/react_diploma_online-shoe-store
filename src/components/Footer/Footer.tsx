@@ -24,8 +24,8 @@ export default function Footer() {
       <div className="row">
         <div className="col">
           <section>
-            <h5>Информация</h5>
-            <ul className="nav flex-column">
+            <h5 className="text-left">Информация</h5>
+            <ul className="nav flex-column text-left">
               {footerNavList.map((item, index) => (
                 <li key={index} className="nav-item">
                   <NavLink to={item.link} className="nav-link">
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
         <div className="col">
           <section>
-            <h5>Принимаем к оплате:</h5>
+            <h5 className="text-left">Принимаем к оплате:</h5>
             <div className="footer-pay">
               <div className="footer-pay-systems footer-pay-systems-paypal"></div>
               <div className="footer-pay-systems footer-pay-systems-master-card"></div>
@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="footer-pay-systems footer-pay-systems-qiwi"></div>
             </div>
           </section>
-          <section>
+          <section className="text-left">
             <div className="footer-copyright">
               2009-2019 © BosaNoga.ru — модный интернет-магазин обуви и
               аксессуаров. Все права защищены.
