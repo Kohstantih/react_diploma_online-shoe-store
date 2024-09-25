@@ -4,20 +4,23 @@ import { NavLink } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
-  const footerNavList = useMemo(() => [
-    {
-      link: '/about',
-      name: 'О магазине',
-    },
-    {
-      link: '/catalog',
-      name: 'Каталог',
-    },
-    {
-      link: '/contacts',
-      name: 'Контакты',
-    },
-  ], []);
+  const footerNavList = useMemo(
+    () => [
+      {
+        link: '/about',
+        name: 'О магазине',
+      },
+      {
+        link: '/catalog',
+        name: 'Каталог',
+      },
+      {
+        link: '/contacts',
+        name: 'Контакты',
+      },
+    ],
+    []
+  );
 
   return (
     <footer className="container bg-light footer">
