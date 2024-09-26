@@ -1,3 +1,5 @@
 # Интернет магазин обуви
 
-[backend repository](https://github.com/Kohstantih/react_diploma_online-shoe-store_backend.git)
+[Открыть приложение](https://kohstantih.github.io/react_diploma_online-shoe-store/)
+
+[Задание](https://github.com/netology-code/ra16-diploma.git)
