@@ -18,7 +18,13 @@ function App() {
   const { isActive } = useAppSelector((state) => state.details);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      basename={
+        process.env.NODE_ENV === 'production'
+          ? '/react_diploma_online-shoe-store/'
+          : '/'
+      }
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
